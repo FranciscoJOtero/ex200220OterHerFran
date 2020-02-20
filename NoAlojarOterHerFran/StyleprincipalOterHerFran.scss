@@ -1,0 +1,103 @@
+body {
+
+    background:rgb(165, 165, 250);
+
+}
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+img {
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.cabeceraOterHerFran {
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    border-bottom: 2px solid black;
+    min-height: 80px;
+    padding: 10px;
+
+    &__item1, &__item2, &__item3 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        margin: 5px;
+
+
+    }
+
+}
+
+.mainFlexOterHerFran {
+
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+
+    &__elem1, &__elem2, &__elem3 {
+
+        border: 2px solid blanchedalmond;
+
+    }
+
+}
+
+@media (max-width:675px) {
+
+    .cabeceraOterHerFran {
+
+        display: grid;
+        grid-template-columns: 100%;
+        border-bottom: 2px solid black;
+        min-height: 80px;
+        padding: 10px;
+    
+        &__item1, &__item2, &__item3 {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            margin-top: 5px;
+    
+    
+        }
+    
+    }
+
+    .mainFlexOterHerFran {
+
+        display: block;
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+    
+        &__elem1, &__elem2, &__elem3 {
+    
+            border: 2px solid blanchedalmond;
+    
+        }
+    
+    }
+
+}
