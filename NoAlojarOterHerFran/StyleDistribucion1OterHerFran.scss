@@ -17,6 +17,13 @@ img {
 
 }
 
+p {
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
 .ContenedorGridOterHerFran {
 
     display: grid;
@@ -27,6 +34,7 @@ img {
     &__cabecera, &__pie {
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         grid-column: 1/3;

@@ -5,11 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Distribucion1 OterHerFran </title>
         <link rel="stylesheet" href="./css/StyleDistribucion1OterHerFran.css">
+
+    <script>
+        function cuantosClicks() { 
+
+            if(typeof(Storage) !== "undefined") { 
+
+                if (localStorage.cuentadeclicks) {
+
+                    //Si existe el contador, lo incrementamos en 1 
+
+                    localStorage.cuentadeclicks = Number(localStorage.cuentadeclicks)*2; 
+
+                    //Realizamos conversión a número para evitar problemas. Los datos siempre se almacenan como cadena y requieren conversión. 
+                } else { 
+
+                    // Si no existe el contador, lo creamos 
+                    localStorage.cuentadeclicks = 1; 
+                } 
+
+                document.getElementById("parrafo").innerHTML = "Has hecho clic en el botón: " + localStorage.cuentadeclicks + " veces en esta sesión."; 
+
+            } else { 
+
+                document.getElementById("parrafo").innerHTML = "El navegador no soporta almacenamiento local"; 
+            }
+        }
+    </script>
+
     </head>
     <body>
         <div class="ContenedorGridOterHerFran">
             <header class="ContenedorGridOterHerFran__cabecera">
-                <h2> Cabecera </h2>
+                <button onclick="cuantosClicks()"> Pulsar aqui </button>
+                <p id="parrafo"> Has pulsado el boton </p>
             </header>
 
             <main class="ContenedorGridOterHerFran__cuerpo">

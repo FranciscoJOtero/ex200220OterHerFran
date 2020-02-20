@@ -11,6 +11,11 @@ img {
   height: auto;
 }
 
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 .ContenedorGridOterHerFran {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -19,6 +24,7 @@ img {
 }
 .ContenedorGridOterHerFran__cabecera, .ContenedorGridOterHerFran__pie {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   grid-column: 1/3;
